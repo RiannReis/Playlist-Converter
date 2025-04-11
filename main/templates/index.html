@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify to YouTube Converter</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>Spotify to YouTube Converter</h1>
+    <p>Convert public Spotify playlists to public YouTube playlists for free, without registration.</p>
+
+    <div class="input-group">
+      <input type="text" id="playlistInput" placeholder="https://open.spotify.com/playlist/..." />
+      <button onclick="convertPlaylist()"> Convert</button>
+    </div>
+
+    <div id="errorBox" class="error-box hidden"></div>
+
+    <div id="results" class="results-container"></div>
+  </div>
+  
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
