@@ -100,11 +100,14 @@ async function convertPlaylist() {
 
     results.appendChild(createBtn);
     results.appendChild(playlistLinkDiv);
-z
 
   } catch (err) {
-    showError("Failed to convert playlist.");
+    const results = document.getElementById("results");
+    if (results.children.length === 0) {
+      showError("Failed to convert playlist.");
+    }
   }
+  
 }
 
 function showError(message) {
